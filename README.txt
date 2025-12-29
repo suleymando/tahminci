@@ -11,9 +11,10 @@ BetPro, spor bahis tahmin siteleri oluşturmak için hazırlanmış profesyonel 
 
 ## Kurulum
 1. `BetPro-Script-v1.zip` dosyasını hostinginize (public_html veya www) yükleyin ve çıkarın.
-2. Tarayıcınızdan `siteadresi.com/install` adresine gidin.
+2. Tarayıcınızdan `siteadresi.com/install.php` adresine gidin.
 3. Yönetici kullanıcı adı ve şifrenizi belirleyip "Sistemi Kur" butonuna tıklayın.
-4. Kurulum tamamlandıktan sonra `/admin` panelinden giriş yapabilirsiniz.
+4. Kurulum tamamlandıktan sonra güvenlik amacıyla `install.php` dosyasını silin.
+5. `/admin` panelinden giriş yapabilirsiniz.
 
 ## Gereksinimler
 - PHP 7.4 veya üzeri
