@@ -1,25 +1,21 @@
-# BetPro - Premium Betting Prediction Script
+# BetPro - Premium Betting Script (PHP)
 
-BetPro, spor bahis tahmin siteleri oluşturmak için hazırlanmış profesyonel bir PHP scriptidir. Hafif yapısı, veritabanı kurulumu gerektirmeyen (SQLite) mimarisi ve gelişmiş admin paneli ile hemen satışa sunabilirsiniz.
+BetPro, spor bahis tahminlerinizi paylaşabileceğiniz modern, hızlı ve kurulum gerektirmeyen bir PHP scriptidir.
 
 ## Özellikler
-- **Kurulumsuz:** Dosyaları atın ve çalıştırın. SQLite veritabanı kullanır.
-- **Çoklu Dil Desteği:** Türkçe ve İngilizce hazır gelir. Kolayca yeni dil eklenebilir.
-- **Profesyonel Admin Paneli:** Kupon ekleme, maç yönetimi, istatistikler.
-- **Kupon Durum Yönetimi:** Kuponları "Kazandı" veya "Kaybetti" olarak işaretleyip ön yüzde damgalı gösterebilirsiniz.
-- **Responsive Tasarım:** Tüm cihazlarla uyumludur.
+- **Modern Tasarım:** Şık kupon kartları, Güven Barı (Confidence Meter), Kazandı/Kaybetti damgaları.
+- **Yönetim Paneli:** Kullanımı kolay arayüz. Kupon eklerken maçları dinamik olarak girin, oranlar otomatik çarpılsın.
+- **Filtreleme:** Banko, Popüler, Sistem, Tekli kuponları kolayca filtreleyin.
+- **Çoklu Dil:** Türkçe ve İngilizce desteği (otomatik veya manuel geçiş).
+- **Kurulumsuz:** SQLite veritabanı sayesinde veritabanı oluşturmanıza gerek yok. Dosyaları atın ve çalışın.
 
 ## Kurulum
-1. `BetPro-Script-v1.zip` dosyasını hostinginize (public_html veya www) yükleyin ve çıkarın.
-2. Tarayıcınızdan `siteadresi.com/install.php` adresine gidin.
-3. Yönetici kullanıcı adı ve şifrenizi belirleyip "Sistemi Kur" butonuna tıklayın.
-4. Kurulum tamamlandıktan sonra güvenlik amacıyla `install.php` dosyasını silin.
-5. `/admin` panelinden giriş yapabilirsiniz.
+1. Tüm dosyaları sunucunuza (public_html) yükleyin.
+2. Tarayıcınızdan sitenize girin. Otomatik olarak kurulum ekranı (`install.php`) açılacaktır (veya `site.com/install.php` adresine gidin).
+3. Admin kullanıcı adı ve şifrenizi belirleyin.
+4. Kurulum bitti! `/admin` adresinden panele girip kupon eklemeye başlayın.
+5. Güvenlik için `install.php` dosyasını silin.
 
 ## Gereksinimler
 - PHP 7.4 veya üzeri
-- SQLite eklentisi (Genellikle tüm hostinglerde aktiftir)
-- Apache Server (`.htaccess` desteği için)
-
-## Güvenlik
-Kurulumdan sonra güvenlik için `app/controllers/InstallController.php` dosyasını silebilir veya devre dışı bırakabilirsiniz.
+- SQLite eklentisi (Standart olarak tüm hostinglerde açıktır)
