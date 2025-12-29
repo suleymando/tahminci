@@ -1,0 +1,96 @@
+:root {
+    --primary-green: #00904a;
+    --dark-bg: #2c3e50;
+    --accent-yellow: #f1c40f;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #7f8c8d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+/* Header */
+.site-header { background-color: var(--primary-green); color: var(--white); padding: 15px 0; }
+.flex-row { display: flex; justify-content: space-between; align-items: center; }
+.site-title { font-size: 1.5rem; font-weight: 700; color: var(--white); }
+.main-navigation ul { display: flex; gap: 20px; }
+.btn-login { background-color: var(--white); color: var(--primary-green); padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+.lang-switch a { color: rgba(255,255,255,0.7); margin: 0 5px; font-size: 0.9rem; }
+.lang-switch a.active { color: white; font-weight: bold; }
+
+/* Search Filter */
+.search-filter-row { margin: 30px 0; display: flex; gap: 20px; flex-wrap: wrap; }
+.search-bar { flex: 1; position: relative; max-width: 400px; }
+.search-bar input { width: 100%; padding: 12px 15px 12px 40px; border: 1px solid #ddd; border-radius: 5px; }
+.search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #aaa; }
+.filter-btn { background: var(--white); border: 1px solid #ddd; padding: 8px 20px; border-radius: 5px; font-weight: 600; cursor: pointer; }
+.filter-btn.active { background: var(--primary-green); color: white; border-color: var(--primary-green); }
+
+/* Layout */
+.content-grid { display: flex; gap: 30px; }
+.main-column { flex: 2; }
+.sidebar-column { flex: 1; max-width: 350px; }
+
+/* Coupons */
+.coupons-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
+.coupon-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: relative; }
+
+/* Status Stamps */
+.stamp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-size: 2rem;
+    font-weight: bold;
+    border: 5px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 10;
+    opacity: 0.8;
+}
+.stamp-won { color: #27ae60; border-color: #27ae60; background: rgba(255,255,255,0.9); }
+.stamp-lost { color: #c0392b; border-color: #c0392b; background: rgba(255,255,255,0.9); }
+
+.coupon-header { padding: 12px 15px; display: flex; justify-content: space-between; align-items: center; color: var(--white); font-weight: 600; }
+.card-header-default, .card-header-banko, .card-header-popular { background-color: var(--dark-bg); }
+.card-header-banko, .card-header-popular { color: var(--accent-yellow); }
+
+.coupon-body { padding: 0; }
+.match-item { padding: 15px; border-bottom: 1px solid #f0f0f0; }
+.match-meta-top { display: flex; gap: 10px; margin-bottom: 8px; color: #2c3e50; font-weight: 600; }
+.match-details { display: flex; justify-content: space-between; align-items: center; color: var(--text-light); }
+.prediction-badge .pred-value { background: #e67e22; color: white; padding: 1px 6px; border-radius: 50%; font-weight: bold; }
+.match-odds { font-size: 1.1rem; font-weight: bold; color: var(--text-dark); }
+
+.coupon-footer { padding: 15px; background: #34495e; color: white; display: flex; justify-content: space-between; align-items: center; }
+.total-odds .value { font-size: 1.2rem; font-weight: bold; margin-left: 5px; }
+.btn-play { background: var(--primary-green); color: var(--white); padding: 8px 20px; border-radius: 4px; font-weight: bold; font-size: 0.9rem; }
+
+/* Sidebar */
+.special-offer { background: linear-gradient(135deg, #00904a 0%, #00b85d 100%); color: var(--white); padding: 30px; border-radius: 8px; text-align: center; }
+.btn-cta { background: var(--white); color: var(--primary-green); padding: 10px 25px; border-radius: 30px; font-weight: bold; display: inline-block; margin-top: 15px; }
+
+.site-footer { background: white; padding: 40px 0; margin-top: 50px; text-align: center; border-top: 1px solid #eee; color: #999; }
+
+/* Detail Page */
+.detail-view { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.detail-header { text-align: center; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.btn-bet-large { display: block; width: 100%; background: #e67e22; color: white; text-align: center; padding: 15px; font-size: 1.2rem; font-weight: bold; border-radius: 5px; margin-top: 30px; }
+
+@media (max-width: 768px) {
+    .content-grid { flex-direction: column; }
+    .header-actions { margin-top: 10px; }
+}
