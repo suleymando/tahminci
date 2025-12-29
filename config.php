@@ -43,6 +43,11 @@ try {
         FOREIGN KEY(coupon_id) REFERENCES coupons(id) ON DELETE CASCADE
     )");
 
+    $pdo->exec("CREATE TABLE IF NOT EXISTS settings (
+        setting_key TEXT PRIMARY KEY,
+        setting_value TEXT
+    )");
+
 } catch (PDOException $e) {
     die("Database Error: " . $e->getMessage());
 }
@@ -72,4 +77,19 @@ function check_admin() {
         header("Location: login.php");
         exit;
     }
+}
+
+// Settings Helpers
+function get_setting($key, $default = '') {
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT setting_value FROM settings WHERE setting_key = ?");
+    $stmt->execute([$key]);
+    $res = $stmt->fetchColumn();
+    return $res !== false ? $res : $default;
+}
+
+function update_setting($key, $value) {
+    global $pdo;
+    $stmt = $pdo->prepare("INSERT OR REPLACE INTO settings (setting_key, setting_value) VALUES (?, ?)");
+    $stmt->execute([$key, $value]);
 }

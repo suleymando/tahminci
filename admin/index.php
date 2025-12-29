@@ -64,6 +64,7 @@ $coupons = $stmt->fetchAll();
     <ul class="menu">
         <li><a href="index.php"><i class="fas fa-tachometer-alt"></i> <?php echo __('dashboard'); ?></a></li>
         <li><a href="add_coupon.php"><i class="fas fa-plus-circle"></i> <?php echo __('add_coupon'); ?></a></li>
+        <li><a href="settings.php"><i class="fas fa-cog"></i> <?php echo __('settings'); ?></a></li>
         <li><a href="../index.php" target="_blank"><i class="fas fa-external-link-alt"></i> Siteyi Görüntüle</a></li>
         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> <?php echo __('logout'); ?></a></li>
     </ul>

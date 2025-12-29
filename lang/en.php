@@ -38,5 +38,18 @@ return [
     'odds' => 'Odds',
     'league' => 'League',
     'special_offer' => 'Special Offer',
-    'register_now' => 'Register Now'
+    'register_now' => 'Register Now',
+    // Settings
+    'settings' => 'Settings',
+    'seo_settings' => 'SEO Settings',
+    'site_title' => 'Site Title',
+    'site_desc' => 'Site Description',
+    'site_keywords' => 'Keywords',
+    'ad_settings' => 'Ad Management',
+    'ad_header' => 'Header Ad (728x90)',
+    'ad_footer' => 'Footer Ad',
+    'ad_popup' => 'Popup Ad Code',
+    'popup_status' => 'Popup Active?',
+    'active' => 'Active',
+    'passive' => 'Passive'
 ];

@@ -30,11 +30,23 @@ unset($coupon); // break ref
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetPro - Premium Betting Tips</title>
+    <title><?php echo htmlspecialchars(get_setting('site_title', 'BetPro')); ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars(get_setting('site_desc')); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars(get_setting('site_keywords')); ?>">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+<!-- Popup Ad -->
+<?php if(get_setting('popup_status') == '1'): ?>
+<div id="ad-popup" class="ad-popup-overlay">
+    <div class="ad-popup-content">
+        <span class="close-popup" onclick="document.getElementById('ad-popup').style.display='none'">&times;</span>
+        <?php echo get_setting('ad_popup'); ?>
+    </div>
+</div>
+<?php endif; ?>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -49,6 +61,13 @@ unset($coupon); // break ref
         </div>
     </div>
 </header>
+
+<!-- Header Ad -->
+<?php if($ad = get_setting('ad_header')): ?>
+<div class="container ad-zone">
+    <?php echo $ad; ?>
+</div>
+<?php endif; ?>
 
 <div class="hero-filter">
     <div class="container">
@@ -116,6 +135,13 @@ unset($coupon); // break ref
 </div>
 
 <footer class="site-footer">
+    <!-- Footer Ad -->
+    <?php if($ad = get_setting('ad_footer')): ?>
+    <div class="container ad-zone">
+        <?php echo $ad; ?>
+    </div>
+    <?php endif; ?>
+
     <div class="container">
         &copy; <?php echo date('Y'); ?> BetPro. All rights reserved.
     </div>

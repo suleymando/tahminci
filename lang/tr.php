@@ -38,5 +38,18 @@ return [
     'odds' => 'Oran',
     'league' => 'Lig',
     'special_offer' => 'Günün Fırsatı',
-    'register_now' => 'Hemen Üye Ol'
+    'register_now' => 'Hemen Üye Ol',
+    // Settings
+    'settings' => 'Ayarlar',
+    'seo_settings' => 'SEO Ayarları',
+    'site_title' => 'Site Başlığı',
+    'site_desc' => 'Site Açıklaması',
+    'site_keywords' => 'Anahtar Kelimeler',
+    'ad_settings' => 'Reklam Yönetimi',
+    'ad_header' => 'Üst Alan Reklamı (Header 728x90)',
+    'ad_footer' => 'Alt Alan Reklamı (Footer)',
+    'ad_popup' => 'Popup Reklam Kodu',
+    'popup_status' => 'Popup Aktif mi?',
+    'active' => 'Aktif',
+    'passive' => 'Pasif'
 ];
